@@ -1,0 +1,12 @@
+.footer1 {
+    height: 10vh;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover {
+    color: black;
+}

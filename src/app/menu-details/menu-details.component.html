@@ -1,0 +1,26 @@
+<app-hero></app-hero>
+<h1 style="font-size:50px" class="text1 text-center m-1 p-1">You can order from here</h1>
+<hr>
+
+<div class="card mb-3 card" style="max-width: 500px;">
+    <div class="row g-0">
+        <div class="  col-md-4">
+            <img src="{{productsz.img}}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <div *ngIf="productsz" class="d-flex">
+                    <div class="d-flex flex-column mb-3">
+                        <h5 class="card-title p-2">{{productsz.name}}</h5>
+                        <p class="card-text p-2">{{productsz.price | currency }}</p>
+                    </div>
+                    <button class="btn btn-info mt-auto p-2" (click)="addToCartX()"> Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex d-flex justify-content-center m-4">
+    <button class=" btn btn-info" aria-current="page" routerLink="/cart">Go to Buy {{count}}</button>
+</div>

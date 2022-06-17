@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row gap-5">
+        <div class="col-6">
+            <div class="card mb-3" style="max-width: 540px;">
+                <h5 class="card-header">Cart {{count}} item(s)</h5>
+                <div class="row g-0" *ngFor="let productcart of cartx">
+                    <div class="col-md-4">
+                        <img src="{{productcart.img}}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="card-title fs-1">{{productcart.name}}</p>
+                            <h6 class="card-title">{{productcart.description}}</h6>
+                            <p class="card-text fw-bold">{{productcart.price | currency}}</p>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <h5 class="card-header">Summary</h5>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="fw-semibol"> Products: {{this.total | currency}}</p>
+                            <p class="fw-semibol"> Service: {{this.service | currency}}</p>
+                            <p class="fw-semibol"> Discount: {{this.discount | currency}}</p>
+                            <hr>
+                            <p class="fw-bold"> Total amount: {{this.final | currency}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 style="font-size:50px" class="text1 m-4 ">Order Form</h1>
+    <p class="m-4 fw-semibold"> please fill up the info for the delivery</p>
+    <hr>
+    <form class="m-4">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Address</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <button type="submit" class="btn btn-success">Purschase</button>
+    </form>
+</div>

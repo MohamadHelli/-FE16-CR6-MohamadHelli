@@ -1,0 +1,17 @@
+.text1 {
+    font-family: 'Caveat', cursive;
+    font-family: 'Great Vibes', cursive;
+    padding-top: 80px;
+}
+
+.text2 {
+    padding-bottom: 50px;
+}
+
+.img1 {
+    height: 60vh;
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+}

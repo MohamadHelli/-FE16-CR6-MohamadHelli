@@ -1,0 +1,27 @@
+<h1 style="font-size:50px" class="text1 text-center m-4 p-5">Our specialties</h1>
+<hr>
+
+<div class="row m-4 g-4">
+    <div class="col-lg-4 col-md-6" *ngFor=" let product of products; index as i ">
+        <div class="card shadow-lg">
+            <img src="{{product.img}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-title fs-1">{{product.name}}</p>
+                <hr>
+                <h6 class="card-title">{{product.description}}</h6>
+                <hr>
+                <p class="card-text fw-bold">{{product.price | currency}}</p>
+                <hr>
+                <h6 class="card-title" *ngIf="product.qtt == true; else full">
+                    <div class="row gap-3">
+                        <button class="btn btn-primary" routerLink="menu/{{ i }}">Details</button>
+                        <button class="btn btn-success" (click)="addToCart(product) ">Order</button>
+                    </div>
+                </h6>
+                <ng-template #full>
+                    <p class="card-text fw-bold text-danger">This product is not available.</p>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
